@@ -35,8 +35,8 @@ fn main() {
             clear(BACK_COLOR, g);
             game.draw(&c, g);
         });
-
-        event.update(|arg| {
+        
+        event.update(|arg: &UpdateArgs| {
             game.update(arg.dt);
         });
     }
